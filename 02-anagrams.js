@@ -57,5 +57,21 @@ function thirdAnagram(str1, str2) {
 
 
 function fourthAnagram(str1, str2) {
-  // Code goes here ....
+  let obj1 = {}
+
+  const arr1 = str1.split('')
+  const arr2 = str2.split('')
+  arr1.forEach(ele => {
+    ele in obj1
+      ? obj1[ele]++
+      : obj1[ele] = 1
+  });
+  for (let i = 0; i < arr2.length; i++) {
+    if (obj1.arr2[i]) {
+      obj1.arr2[i]--;
+    } else {
+      return false;
+    }
+  };
+  return true;
 }
