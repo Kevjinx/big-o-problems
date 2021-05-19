@@ -27,13 +27,26 @@ function nlognBiggestFish(fishes) {
 
 
 function linearBiggestFish(fishes) {
-  // Code goes here ...
+  let maxLength = fishes[0].length;
+  let maxFish = fishes[0];
+
+  for (let i = 1; i < fishes.length; i++) {
+    if (maxLength < fishes[i].length) {
+      maxLength = fishes[i].length;
+      maxFish = fishes[i];
+    }
+  }
+  return maxFish;
 }
 
 
 tilesArray = ["up", "right-up", "right", "right-down", "down", "left-down", "left", "left-up"]
 function slowDance(direction, tilesArray) {
-  // Code goes here ...
+  for (let i = 0; i < tilesArray.length; i++) {
+    if (direction === tilesArray[i]) {
+      return i;
+    }
+  }
 }
 
 
@@ -51,5 +64,5 @@ tilesObj = {
   "left-up": 7
 }
 function fastDance(direction, tilesObj) {
-  // Code goes here ...
+  return tilesObj[direction];
 }
