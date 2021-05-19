@@ -18,6 +18,11 @@ function quadraticBiggestFish(fishes) {
 
 function nlognBiggestFish(fishes) {
   // Code goes here ...
+  const sortedFishes = fishes.sort((a,b) => {
+    return a.length - b.length;
+  })
+
+  return sortedFishes[sortedFishes.lenght - 1]
 }
 
 
